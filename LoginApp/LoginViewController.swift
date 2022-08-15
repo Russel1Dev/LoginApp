@@ -20,7 +20,7 @@ final class LoginViewController: UIViewController {
     
     // MARK: - Public Method
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "logIn" else { return }
+        guard segue.identifier == "logInButton" else { return }
         let welcomeVC = segue.destination as! WelcomeViewController
         welcomeVC.userName = userNameTextField.text
     }
@@ -37,7 +37,7 @@ final class LoginViewController: UIViewController {
             return
         }
         
-        performSegue(withIdentifier: "logIn", sender: nil)
+        performSegue(withIdentifier: "logInButton", sender: nil)
     }
     
     @IBAction func forgotUserNameButton() {
